@@ -1,3 +1,2 @@
-interface:
-  display_name: "모델 라우팅 어드바이저"
-  short_description: "작업 단계별 최소 충분 모델·추론·병렬화 추천"
+policy:
+  allow_implicit_invocation: false
