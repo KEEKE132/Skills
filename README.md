@@ -46,26 +46,29 @@
 
 `pr-review-response`는 `gh-address-comments`와 역할이 겹쳐 제거했습니다. 일반적인 PR 분석에는 기존 `pr-review`를 계속 사용합니다.
 
-## 명시적으로 호출하는 것이 좋은/필요한 스킬
+## 호출 정책
 
-### 명시 호출 필요
+토큰 사용량을 제한하기 위해 개발 툴킷은 **핵심 상황별 스킬만 자동 호출**하고, 설계·오케스트레이션·광범위한 조사처럼 비용이 커질 수 있는 흐름은 명시 호출로 전환했습니다. 명시 호출 대상에는 SKILL.md frontmatter의 `disable-model-invocation: true`와 Codex 인터페이스 정책 `agents/openai.yaml`의 `allow_implicit_invocation: false`를 함께 사용합니다.
 
-- `grill-with-docs` — 메타데이터의 `disable-model-invocation: true` 때문에 `/grill-with-docs`로 호출해야 합니다.
-- `to-spec` — 메타데이터의 `disable-model-invocation: true` 때문에 `/to-spec`로 호출해야 합니다.
+### 자동 호출
 
-### 명시 호출 권장
+- `systematic-debugging` — 버그, 테스트 실패, 예기치 않은 동작의 원인 분석.
+- `verification-before-completion` — 완료·수정·통과를 주장하기 전의 검증.
+- `playwright` — 실제 브라우저 자동화가 필요한 UI 흐름 점검.
+- `gh-fix-ci` — GitHub Actions PR 체크 실패의 조사와 수정 계획.
+- `gh-address-comments` — 현재 PR의 리뷰·이슈 코멘트 대응.
+- `domain-modeling` — 용어, `CONTEXT.md`, ADR을 실제로 만들거나 갱신하는 작업.
 
-- `security-threat-model` — 메타데이터가 사용자의 명시적 위협 모델링 요청에만 트리거되도록 제한합니다. 예: “`/security-threat-model`로 이 레포를 위협 모델링해줘”.
-- `playwright` — 실제 브라우저 조작을 의도한 경우에만 호출하세요. 예: “`/playwright`로 로그인 흐름을 확인해줘”.
-- `gh-address-comments` — 대응할 리뷰 항목을 선택해야 하므로 PR 리뷰 대응을 명확히 요청할 때 사용하세요.
-- `gh-fix-ci` — GitHub Actions 체크 실패를 조사·수정할 때 호출하세요.
-- `research` — 조사 범위와 결과 문서화를 원할 때 호출하면 가장 예측 가능합니다.
+### 명시 호출
 
-그 외 스킬은 `SKILL.md`의 설명에 맞는 요청에서 자동으로 적용될 수 있습니다.
+- `grill-with-docs`, `research`, `to-spec`, `security-threat-model`
+- `using-superpowers` 및 나머지 Superpowers 워크플로우: `brainstorming`, `dispatching-parallel-agents`, `executing-plans`, `finishing-a-development-branch`, `receiving-code-review`, `requesting-code-review`, `subagent-driven-development`, `test-driven-development`, `using-git-worktrees`, `writing-plans`, `writing-skills`
+
+예: `/research`, `/security-threat-model`, `/using-superpowers`. 특히 `using-superpowers`는 더 이상 모든 대화의 글로벌 진입점으로 자동 동작하지 않으며, 사용자가 전체 워크플로우를 요청할 때만 실행됩니다.
 
 ## 원본과 라이선스
 
-벤더링한 스킬은 아래 원본 커밋을 기준으로 합니다. 원문 스킬 파일과 포함된 라이선스/NOTICE는 수정하지 않았습니다.
+벤더링한 스킬은 아래 원본 커밋을 기준으로 합니다. 호출 정책을 위한 SKILL.md frontmatter 외에는 원문 파일과 포함된 라이선스/NOTICE를 수정하지 않았습니다.
 
 | 구성 | 원본 | 고정 커밋 | 라이선스·고지 |
 | --- | --- | --- | --- |

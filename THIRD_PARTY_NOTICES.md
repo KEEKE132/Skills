@@ -1,6 +1,6 @@
 # Third-Party Notices
 
-This repository vendors third-party Codex skill content without changing the upstream skill files.
+This repository vendors third-party Codex skill content. SKILL.md frontmatter may add local invocation-policy metadata; upstream license and notice files are retained unchanged.
 
 ## obra/superpowers
 

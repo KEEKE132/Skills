@@ -1,6 +1,7 @@
 ---
 name: using-superpowers
-description: Use when starting any conversation - establishes how to find and use skills, requiring skill invocation before ANY response including clarifying questions
+description: Explicit-only Superpowers orchestration entry point. Use only when the user asks to run the full Superpowers workflow.
+disable-model-invocation: true
 ---
 
 <SUBAGENT-STOP>
