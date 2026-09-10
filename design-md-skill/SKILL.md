@@ -1,20 +1,19 @@
 ---
 name: design-md-skill
-version: 1.0.0
-description: "웹사이트/브랜드를 분석해 DESIGN.md 디자인 시스템을 작성하고, 이를 읽어 일관된 UI를 설계한다."
+description: "웹사이트·브랜드·참조 디자인 시스템을 분석·재구성해 DESIGN.md를 작성하고, 이를 읽어 일관된 UI를 설계한다."
 license: MIT
-profiles:
-  - deep-code-host
-generated_by: deepwork-agent-skill-creator
-tags:
-  - design
-  - design-system
-  - design-md
-  - ui
-  - branding
 metadata:
   author: Deep Agent
-  version: 1.0.0
+  version: 1.1.0
+  generated_by: deepwork-agent-skill-creator
+  profiles:
+    - deep-code-host
+  tags:
+    - design
+    - design-system
+    - design-md
+    - ui
+    - branding
   created: 2026-09-09
   last_reviewed: 2026-09-09
   review_interval_days: 90
@@ -22,6 +21,12 @@ metadata:
     - url: https://github.com/voltagent/awesome-design-md
       name: awesome-design-md
       type: repo
+    - url: https://getdesign.md/
+      name: getdesign.md
+      type: catalog
+    - url: https://oh-my-design.kr/
+      name: oh-my-design.kr
+      type: catalog
     - url: https://stitch.withgoogle.com/docs/design-md/overview/
       name: Google Stitch DESIGN.md spec
       type: docs
@@ -32,6 +37,18 @@ metadata:
 You are an expert design-systems analyst. Your job is to turn any website, brand, or design intent into a `DESIGN.md` — a plain-text design system document that AI agents read to generate visually consistent UI — and to apply existing `DESIGN.md` files when building or refining screens.
 
 This follows the Google Stitch DESIGN.md concept and the awesome-design-md collection (`https://github.com/voltagent/awesome-design-md`, 73+ real brand DESIGN.md files). Markdown is the format LLMs read best: no schemas, no tooling, just a file in the project root.
+
+## Reference discovery and recomposition
+
+When a design direction is not already established, find references before defining a new visual system. Use each source for its strongest evidence:
+
+- **Named brand or aesthetic direction**: search the getdesign.md catalog first, then `awesome-design-md` for a raw GitHub contract. Consult the oh-my-design catalog when a closer product category or quality-graded comparison is needed.
+- **Public URL or existing product**: inspect the page directly and use its visible implementation as evidence. Treat reference tokens as evidence, not as a license to copy branded assets or content.
+- **Ambiguous style request**: select up to three relevant references, explain the recommended direction in one short comparison, and use the user's product, audience, and constraints to choose one before writing the contract.
+
+Recompose, do not clone: derive transferable principles such as density, hierarchy, contrast, spacing rhythm, component behavior, and motion restraint. Do not reproduce a reference's logo, copy, photography, illustration, trademark, or proprietary asset. Record the consulted source URLs and the adapted traits in the generated `DESIGN.md`.
+
+An existing project `DESIGN.md` is the current design contract. Do not replace its format or tokens from an external reference unless the user explicitly requests a redesign or migration. Preserve an existing oh-my-design Core v2 document format; use this skill's template for new documents unless the user requests Core v2.
 
 ## Trigger
 
@@ -64,16 +81,17 @@ Also activate without the prefix: "디자인 시스템 문서화해줘", "이 �
 
 1. **Identify the target.** Accept a URL, a brand name, or a free-text style description ("warm minimalism, serif headings, soft surfaces").
 2. **Gather evidence.**
-   - URL given → `web_fetch` the page. Inspect visible colors, fonts, radii, spacing, button/card styles, header/footer.
-   - Brand name matches the awesome-design-md collection → fetch the authoritative DESIGN.md:
+   - URL given → inspect the page and its visible CSS evidence. Inspect colors, fonts, radii, spacing, button/card styles, header/footer, and responsive behavior.
+   - Brand name or style direction given → search getdesign.md for a matching DESIGN.md, then use awesome-design-md when its raw reference is available:
      `https://raw.githubusercontent.com/voltagent/awesome-design-md/main/design-md/<slug>/DESIGN.md`
      (slug examples: `linear.app`, `stripe`, `vercel`, `notion`, `spotify`. See `references/brand-library.md` for the full list.)
+   - A closer product-category reference is needed → search the oh-my-design catalog and fetch the matching public DESIGN.md. Use it as inspiration, not an authoritative source for the user's brand.
    - Neither → ask the user for a URL, screenshots, or a concrete style description before inventing a design language.
 3. **Extract design tokens** (see `references/extraction-guide.md`):
    - **colors**: canvas, surface ladder, ink ladder, primary + hover/press/focus states, semantic colors, hairlines.
    - **typography**: family stack, size/weight/line-height/letter-spacing per role (display-xl … caption, button, mono).
    - **rounded**: xs→pill scale. **spacing**: base unit + tokens. **components**: button/card/input/nav/footer with states.
-4. **Write `DESIGN.md`** to the project root using `templates/design-md-template.md`. Frontmatter must include: `version`, `name`, `description` (single-line double-quoted), `colors`, `typography`, `rounded`, `spacing`, `components`. Body must include: Overview, Colors, Typography, Layout, Elevation & Depth, Shapes, Components, Do's and Don'ts, Responsive Behavior, Agent Prompt Guide.
+4. **Write `DESIGN.md`** to the project root using `templates/design-md-template.md`. Frontmatter must include: `version`, `name`, `description` (single-line double-quoted), `colors`, `typography`, `rounded`, `spacing`, `components`. Body must include: Overview, Colors, Typography, Layout, Elevation & Depth, Shapes, Components, Do's and Don'ts, Responsive Behavior, Agent Prompt Guide. List sources and the traits adapted from each source.
 5. **Verify** against the checklist below. Report the absolute path.
 
 ### Use Case 2 — Style request → UI generation (existing DESIGN.md)
@@ -86,8 +104,8 @@ Also activate without the prefix: "디자인 시스템 문서화해줘", "이 �
 
 ### Use Case 3 — No DESIGN.md, style request → find a reference design language
 
-1. If the user names a brand in the awesome-design-md collection, fetch its DESIGN.md as the contract (Use Case 1 step 2).
-2. If the user's intent matches a collection archetype (dark terminal-first → VoltAgent/Ollama; minimal purple accent → Linear; warm coral photography → Airbnb; fintech precision → Stripe), fetch that reference and adapt its tokens to the user's product.
+1. If the user names a brand or style in the getdesign.md catalog, fetch its DESIGN.md as the starting reference. Otherwise use the awesome-design-md source (Use Case 1 step 2).
+2. If the user's intent matches a collection archetype (dark terminal-first → VoltAgent/Ollama; minimal purple accent → Linear; warm coral photography → Airbnb; fintech precision → Stripe), compare it with the closest oh-my-design catalog reference when that improves category fit, then adapt transferable traits to the user's product.
 3. Create the adapted `DESIGN.md` in the project, then proceed with Use Case 2.
 
 ### Use Case 4 — Existing UI / design description → DESIGN.md distillation
