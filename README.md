@@ -30,6 +30,7 @@
 ### 설계·조사
 
 - `grill-with-docs` — 설계/계획을 집중적으로 질문하며 ADR과 용어 문서를 만듭니다.
+- `grilling` — 계획이나 설계를 결정 트리와 질문 라운드로 검토합니다. `grill-with-docs`에서 함께 사용합니다.
 - `domain-modeling` — 용어집(`CONTEXT.md`)과 ADR로 도메인 모델을 정리합니다.
 - `research` — 1차 출처를 조사해 결과를 레포의 Markdown 문서로 남깁니다.
 - `to-spec` — 현재 대화와 코드베이스를 구현 명세 및 이슈로 종합합니다.
@@ -64,6 +65,8 @@
 - `grill-with-docs`, `research`, `to-spec`, `security-threat-model`
 - `using-superpowers` 및 나머지 Superpowers 워크플로우: `brainstorming`, `dispatching-parallel-agents`, `executing-plans`, `finishing-a-development-branch`, `receiving-code-review`, `requesting-code-review`, `subagent-driven-development`, `test-driven-development`, `using-git-worktrees`, `writing-plans`, `writing-skills`
 
+`grill-with-docs`를 사용할 때는 `grilling`과 `domain-modeling`도 함께 설치해야 합니다. 이 저장소에서 해당 스킬 폴더들을 각각 Codex 사용자 스킬 경로에 복사하면 세 스킬이 모두 검색됩니다.
+
 예: `/research`, `/security-threat-model`, `/using-superpowers`. 특히 `using-superpowers`는 더 이상 모든 대화의 글로벌 진입점으로 자동 동작하지 않으며, 사용자가 전체 워크플로우를 요청할 때만 실행됩니다.
 
 ## 원본과 라이선스
@@ -73,7 +76,7 @@
 | 구성 | 원본 | 고정 커밋 | 라이선스·고지 |
 | --- | --- | --- | --- |
 | Superpowers 전체 스킬팩 | [obra/superpowers](https://github.com/obra/superpowers) | `b36e0829c6d0140e93cfef2ca599b1b07d4a7797` | MIT — [LICENSES/obra-superpowers-MIT.txt](LICENSES/obra-superpowers-MIT.txt) |
-| grill-with-docs, domain-modeling, research, to-spec | [mattpocock/skills](https://github.com/mattpocock/skills) | `3cca18b368ae95cdbdebbff572ccafa662551015` | MIT — [LICENSES/mattpocock-skills-MIT.txt](LICENSES/mattpocock-skills-MIT.txt) |
+| grill-with-docs, grilling, domain-modeling, research, to-spec | [mattpocock/skills](https://github.com/mattpocock/skills) | `3cca18b368ae95cdbdebbff572ccafa662551015` | MIT — [LICENSES/mattpocock-skills-MIT.txt](LICENSES/mattpocock-skills-MIT.txt) |
 | playwright, gh-fix-ci, gh-address-comments, security-threat-model | [openai/skills](https://github.com/openai/skills) | `49f948faa9258a0c61caceaf225e179651397431` | Apache-2.0 — 각 스킬의 `LICENSE.txt`; Playwright의 `NOTICE.txt` 포함 |
 
 재배포 시 위 MIT 라이선스와 각 OpenAI 스킬의 Apache-2.0 `LICENSE.txt` 및 해당 `NOTICE.txt`를 함께 유지해야 합니다.
