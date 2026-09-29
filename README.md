@@ -80,3 +80,23 @@
 | playwright, gh-fix-ci, gh-address-comments, security-threat-model | [openai/skills](https://github.com/openai/skills) | `49f948faa9258a0c61caceaf225e179651397431` | Apache-2.0 — 각 스킬의 `LICENSE.txt`; Playwright의 `NOTICE.txt` 포함 |
 
 재배포 시 위 MIT 라이선스와 각 OpenAI 스킬의 Apache-2.0 `LICENSE.txt` 및 해당 `NOTICE.txt`를 함께 유지해야 합니다.
+
+## 자연스러운 글쓰기와 시각 결과물
+
+- `k-humanizer` — 한국어 문장을 문맥에 맞게 다듬고 사실과 작성자 목소리를 보존합니다.
+- `writing-cadence` — 문장 길이와 문단 리듬이 반복되는 글을 진단하고 손봅니다.
+- `visual-explainer` — 다이어그램, 비교표, 아키텍처 설명을 HTML 시각 자료로 만듭니다.
+- `canvas-design` — 시각 방향을 먼저 정한 뒤 포스터·정적 이미지를 구성합니다.
+- `imagegen` — 이미지 생성·편집 요청을 구도, 스타일, 제약 조건에 맞게 진행합니다.
+- `presentation-skill` — 근거와 이야기 구조를 정리하고 편집 가능한 PPTX를 렌더링·검토합니다.
+
+### 추가된 스킬 출처와 라이선스
+
+| Skill | Source | Source commit | License notice |
+| --- | --- | --- | --- |
+| `k-humanizer` | [evergreentree97/K-Humanizer](https://github.com/evergreentree97/K-Humanizer) | `324435d561ba48d53de6b7d3fb3dd72cf77030dc` | MIT — [LICENSES/evergreentree97-k-humanizer-MIT.txt](LICENSES/evergreentree97-k-humanizer-MIT.txt) |
+| `writing-cadence` | [msimchowitz/writing-skills](https://github.com/msimchowitz/writing-skills) | `214981fe02326f27b0fc8790d00eb4b731607073` | MIT — [LICENSES/msimchowitz-writing-skills-MIT.txt](LICENSES/msimchowitz-writing-skills-MIT.txt) |
+| `visual-explainer` | [nicobailon/visual-explainer](https://github.com/nicobailon/visual-explainer) | `7163c3e10660912e0b89e1af465db9f387282b88` | MIT — [LICENSES/nicobailon-visual-explainer-MIT.txt](LICENSES/nicobailon-visual-explainer-MIT.txt) |
+| `canvas-design` | [anthropics/skills](https://github.com/anthropics/skills) | `33375500bcea98d610eb30ce10ac4e59b89c390d` | Apache-2.0 — `canvas-design/LICENSE.txt` |
+| `imagegen` | [PracticalSwan/agent-skills](https://github.com/PracticalSwan/agent-skills) | `ff6d12f61e8250dd1b988e101a482f6adc05c451` | Apache-2.0 — `imagegen/LICENSE.txt` |
+| `presentation-skill` | [siril9/presentation-skill](https://github.com/siril9/presentation-skill) | `b6b0974e75e4c7702cfa48ba037d241f2b601d9c` | MIT — `presentation-skill/LICENSE` |

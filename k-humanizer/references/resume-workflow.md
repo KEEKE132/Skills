@@ -1,0 +1,191 @@
+# Resume Workflow
+
+Use this reference with `resume.md` for every resume, career description,
+portfolio summary, LinkedIn profile, or application-writing task. Its default
+job is to remove AI-like Korean while preserving the supplied content, field,
+and voice. It composes or restructures only when the user asks.
+
+## Choose the task before editing
+
+| Input | Task | Default response |
+|---|---|---|
+| One or more finished bullets | Humanize while preserving scope, order, and strength | Return paste-ready bullets. Explain only a material claim issue. |
+| A complete resume or career document | Humanize the document without changing its career story | Keep sections and experience order unless a structural review is requested. |
+| Raw notes, meeting notes, or a task list | Compose only when requested | Extract confirmed facts and list only evidence gaps that affect the draft. |
+| A job posting and existing experience | Tailor only when requested | Reorder verified experience without copying the posting or inventing a match. |
+
+If the user requests composition, restructuring, or a role-targeted rewrite, a
+change over 50% can be appropriate. The evidence boundary still applies even
+when the wording and order change substantially.
+
+## Build an evidence record
+
+For each experience, extract only what the source supports:
+
+| Field | Question | Safe handling when missing |
+|---|---|---|
+| Problem or scope | What work, user problem, repeated task, or decision was involved? | Keep the known task. Do not invent urgency or business importance. |
+| Judgment | What priority, policy, option, standard, or design choice did the person make? | State the action only. Do not imply strategic ownership. |
+| Action | What did the person actually do? | Ask for the action if the source contains only a trait or result. |
+| Ownership | Was the work individual, led, shared, or supporting? | Use neutral wording or flag the boundary. Never default to sole ownership. |
+| State | Was it proposed, approved, piloted, implemented, released, or verified later? | Keep the latest confirmed state. |
+| Result | What changed or was learned? | A clear action or decision can stand without a result. |
+| Measurement | Compared with what, over which period, sample, environment, or evaluator? | Keep the number attached to known conditions or omit the unsupported interpretation. |
+| Disclosure | Which names, customers, figures, or internal methods may be public? | Generalize the name while preserving the functional scope. |
+
+Do not show this table automatically. It is an internal writing aid unless the
+user asks to inspect the evidence.
+
+## Give each section one job when structure is in scope
+
+Use this section for composition, structural review, or a full-document rewrite.
+For a humanization-only request, preserve the original sections and order.
+
+### Summary
+
+Use two or three compact sentences when enough evidence exists. Establish the
+target work, the closest verified scope, and one differentiating way of working
+or result. Do not open with a tool inventory, a personality claim, or an
+aspiration such as `성장하고 싶은 인재입니다`.
+
+For people moving between fields, lead with transferable work already done. Do
+not rename the previous job or imply experience in a new field that the source
+does not support.
+
+### Experience
+
+- Give each bullet one main point.
+- For a structural rewrite, lead with a responsibility, decision, action, or
+  confirmed result that matters to the intended reader.
+- Keep background only when the action is hard to understand without it.
+- Use a second sentence when ownership, conditions, or follow-up would make one
+  sentence overloaded.
+- Vary bullet length by evidence. Do not force every bullet into the same mold.
+
+### Projects and portfolio
+
+State the project context, personal contribution, important judgment, output,
+and confirmed response. For design, planning, research, or QA work, the reason
+for a decision may be more useful than a tool list or a raw output count.
+
+Images, links, screens, reports, prototypes, test records, policies, and
+operating documents are evidence only when the source connects them to the
+person's contribution. A repository or file does not prove sole ownership.
+
+### Skills and tools
+
+Keep exact names that help search or establish domain familiarity. Group them
+by how they were used when the source supports that distinction. Do not assign
+unverified proficiency levels or repeat tools in every experience bullet.
+
+### Education, certificates, and activities
+
+Keep names, dates, status, and scope factual. Move an activity into experience
+or projects only when the work itself is supported. Attendance alone is not a
+project result.
+
+### Application writing
+
+Use complete sentences and the applicant's actual motivation. Define one
+connection before drafting: a verified experience, the problem or working style
+it revealed, the organization's specific work, the role's responsibility, and
+a contribution the applicant can credibly make. Use only the links the source
+supports; all five parts do not need to appear when fewer are enough.
+
+Do not turn admiration for the company or a job-posting phrase into personal
+evidence. An interest statement should name the supplied event or action that
+created the interest. A future contribution should apply earlier evidence
+instead of promising a result the applicant cannot verify yet.
+
+As a diagnostic check, replace the organization name with another one. If the
+paragraph still works unchanged, the reason is too generic. Make the connection
+more specific with supplied official information, or keep the claim narrow when
+no specific basis is available.
+
+## Prioritize only when tailoring is requested
+
+Read `resume-roles.md` when a target role or job description is available. Use
+it to understand field-specific wording. Follow the steps below only when the
+user also asks to tailor, reorder, or restructure the resume.
+
+1. Extract the posting's actual responsibilities, expected decisions, and
+   evidence requirements.
+2. Mark each supplied experience as direct evidence, transferable evidence, or
+   unsupported.
+3. Put direct evidence first. Use transferable evidence only when the connection
+   can be explained without changing the facts.
+4. Keep a genuine gap visible. Do not cover it with a keyword or a stronger job
+   title.
+5. Remove details that consume space without helping the target reader judge the
+   work.
+
+For mixed roles, choose one primary role and one supporting role. For example,
+an operations applicant may use planning experience to show policy decisions,
+but the document should still read as an operations resume rather than eight
+different resumes combined.
+
+## Common resume failures
+
+| Failure | Better handling |
+|---|---|
+| Every bullet starts with a tool or task | Lead with the work, judgment, or result the tool supported. |
+| Every bullet needs a percentage | Keep qualitative evidence when the method, decision, or verified state is meaningful. |
+| A job-posting keyword is repeated as a trait | Use it once beside an experience that proves it. |
+| `협업`, `소통`, or `문제 해결` stands alone | Name the handoff, disagreement, customer request, decision, or follow-up already in the source. |
+| One achievement appears in the summary, skills, and experience | Keep positioning in the summary, names in skills, and evidence in experience. |
+| Technical detail takes over the bullet | Put the work, decision, or user-facing change first. Keep only technical detail that helps explain the experience. |
+| A role is explained by comparing it with another role | State what the target role needs to see instead of using another field as the baseline. |
+| All bullets use abstract noun endings such as `개선`, `강화`, or `고도화` | Name the supported action. Preserve concise action-noun endings such as `설계`, `구현`, `검증`, or `담당` when they match the document's established bullet style. |
+| One section mixes noun endings and full predicates without a reason | Use complete sentences for introductions and application prose; keep a consistent compact style for resume bullets when the destination uses it. |
+| The candidate is changing fields | Show transferable responsibilities without relabeling past experience. |
+
+## Output patterns
+
+### Finished bullets
+
+Return the revised bullets first. Add a short note only if a claim was weakened,
+removed, or left unresolved for evidence safety.
+
+### Raw notes with a safe draft
+
+```markdown
+수정본:
+[paste-ready wording]
+
+확인 필요:
+- [one missing fact that would materially change the claim]
+```
+
+Do not add `확인 필요` when the current wording is already accurate and usable.
+
+### Full resume review
+
+```markdown
+[section name]
+
+바로 사용:
+[paste-ready wording]
+
+근거 보완:
+- [experience and the exact missing boundary]
+
+삭제 또는 이동:
+- [repetition, unsupported claim, or misplaced content]
+```
+
+Use only the headings needed for the document. Keep the rewritten document
+ahead of the review notes.
+
+## Final document check
+
+- The first screen or top third communicates one clear target direction.
+- The first two experience bullets answer the target role's main hiring questions.
+- Every claim maps to supplied evidence.
+- Ownership and completion state stay visible.
+- Numbers retain their comparison and measurement conditions.
+- Each section adds new information.
+- The document does not depend on personality claims or job-posting keywords.
+- The document uses evidence that matters for the target role instead of forcing
+  every bullet into a metric-only formula.
+- The result is concise enough to scan and specific enough to discuss in an
+  interview.
