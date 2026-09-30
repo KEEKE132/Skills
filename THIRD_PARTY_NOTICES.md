@@ -19,3 +19,9 @@ The `grill-with-docs`, `domain-modeling`, `research`, and `to-spec` skill direct
 Source: https://github.com/openai/skills at `49f948faa9258a0c61caceaf225e179651397431`.
 
 The `playwright`, `gh-fix-ci`, `gh-address-comments`, and `security-threat-model` skill directories retain their upstream Apache-2.0 `LICENSE.txt` files. `playwright/NOTICE.txt` is also retained as required by its upstream distribution.
+
+## cathrynlavery/diagram-design
+
+Source: https://github.com/cathrynlavery/diagram-design at `57148ac6f7cf8f2d0080f23437ab2929bca15f3e`.
+
+The `diagram-design` skill is licensed under the MIT License. Its complete license and copyright notice are preserved in [LICENSES/cathrynlavery-diagram-design-MIT.txt](LICENSES/cathrynlavery-diagram-design-MIT.txt).

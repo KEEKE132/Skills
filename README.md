@@ -86,6 +86,7 @@
 - `k-humanizer` — 한국어 문장을 문맥에 맞게 다듬고 사실과 작성자 목소리를 보존합니다.
 - `writing-cadence` — 문장 길이와 문단 리듬이 반복되는 글을 진단하고 손봅니다.
 - `visual-explainer` — 다이어그램, 비교표, 아키텍처 설명을 HTML 시각 자료로 만듭니다.
+- `diagram-design` — 편집 원칙이 반영된 아키텍처·프로세스 다이어그램을 HTML/SVG/PNG로 만듭니다.
 - `canvas-design` — 시각 방향을 먼저 정한 뒤 포스터·정적 이미지를 구성합니다.
 - `imagegen` — 이미지 생성·편집 요청을 구도, 스타일, 제약 조건에 맞게 진행합니다.
 - `presentation-skill` — 근거와 이야기 구조를 정리하고 편집 가능한 PPTX를 렌더링·검토합니다.
@@ -100,3 +101,4 @@
 | `canvas-design` | [anthropics/skills](https://github.com/anthropics/skills) | `33375500bcea98d610eb30ce10ac4e59b89c390d` | Apache-2.0 — `canvas-design/LICENSE.txt` |
 | `imagegen` | [PracticalSwan/agent-skills](https://github.com/PracticalSwan/agent-skills) | `ff6d12f61e8250dd1b988e101a482f6adc05c451` | Apache-2.0 — `imagegen/LICENSE.txt` |
 | `presentation-skill` | [siril9/presentation-skill](https://github.com/siril9/presentation-skill) | `b6b0974e75e4c7702cfa48ba037d241f2b601d9c` | MIT — `presentation-skill/LICENSE` |
+| `diagram-design` | [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) | `57148ac6f7cf8f2d0080f23437ab2929bca15f3e` | MIT — [LICENSES/cathrynlavery-diagram-design-MIT.txt](LICENSES/cathrynlavery-diagram-design-MIT.txt) |
