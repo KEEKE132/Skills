@@ -1,0 +1,6 @@
+interface:
+  display_name: "Attention-kind"
+  short_description: "결론 먼저, 짧고 읽기 쉽게 답하며 중요한 조건과 위험은 빠뜨리지 않는 출력 스타일"
+  default_prompt: "$attention-kind 스타일로 답해줘. 결론부터 말하고 필요한 내용만 읽기 쉽게 정리해줘."
+policy:
+  allow_implicit_invocation: true

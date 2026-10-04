@@ -1,0 +1,7 @@
+Attention-kind for Codex
+Adapted from https://github.com/alexgreensh/attention-span
+Source: output-styles/attention-kind.md at 2714c965e6be1fa2597510e66651e63bc67cb448
+Upstream author: alexgreensh and attention-span contributors.
+Upstream license: GNU Affero General Public License v3.0 (LICENSE.txt).
+Modified 2026-10-04 for Codex metadata, Korean/user-language responses, diagnosis-neutral wording, artifact compatibility, and autonomous task completion.
+This adaptation is distributed under the same AGPL-3.0 license.

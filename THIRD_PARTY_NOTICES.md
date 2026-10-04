@@ -25,3 +25,7 @@ The `playwright`, `gh-fix-ci`, `gh-address-comments`, and `security-threat-model
 Source: https://github.com/cathrynlavery/diagram-design at `57148ac6f7cf8f2d0080f23437ab2929bca15f3e`.
 
 The `diagram-design` skill is licensed under the MIT License. Its complete license and copyright notice are preserved in [LICENSES/cathrynlavery-diagram-design-MIT.txt](LICENSES/cathrynlavery-diagram-design-MIT.txt).
+
+## alexgreensh/attention-span
+
+The independent `attention-kind` skill adapts `output-styles/attention-kind.md` from https://github.com/alexgreensh/attention-span at `2714c965e6be1fa2597510e66651e63bc67cb448` (upstream v0.8). Modified 2026-10-04 for Codex and user-language support. This skill remains licensed under AGPL-3.0; its full upstream license and source/modification notice are preserved in `attention-kind/LICENSE.txt` and `attention-kind/NOTICE.txt`.
