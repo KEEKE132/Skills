@@ -43,11 +43,13 @@
 
 ### 검증·보안
 
+- `code-review` — 구현 후 자기 리뷰와 코드 품질 개선을 수행합니다. 단순성·가독성·명확성·변경 필요성과 AI-Slop을 검토하고 승인된 범위에서 수정·검증합니다.
 - `playwright` — 실제 브라우저를 자동화해 UI 흐름을 확인하고 디버깅합니다.
 - `security-threat-model` — 코드 근거로 자산, 신뢰 경계, 공격 경로, 완화책을 담은 위협 모델을 작성합니다.
 
 ### GitHub
 
+- `pr-review` — PR의 목적·변경사항·영향 범위와 검토 항목을 분석해 문서화합니다. 리뷰 중 코드는 수정하지 않습니다.
 - `gh-address-comments` — 현재 브랜치의 열려 있는 PR 리뷰/이슈 코멘트를 수집하고 선택한 항목을 처리합니다.
 - `gh-fix-ci` — GitHub Actions PR 체크 실패를 조사하고, 승인 후 수정합니다.
 
@@ -59,6 +61,8 @@
 
 ### 자동 호출
 
+- `code-review` — 코드를 작성·수정한 뒤 완료 보고·커밋·PR 생성 전 자기 리뷰와 필요한 수정·검증.
+- `pr-review` — PR 리뷰 요청의 분석과 피드백 정리. 구현 후 자기 리뷰는 `code-review`가 담당합니다.
 - `systematic-debugging` — 버그, 테스트 실패, 예기치 않은 동작의 원인 분석.
 - `verification-before-completion` — 완료·수정·통과를 주장하기 전의 검증.
 - `playwright` — 실제 브라우저 자동화가 필요한 UI 흐름 점검.
