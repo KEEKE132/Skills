@@ -101,6 +101,10 @@
 - `imagegen` — 이미지 생성·편집 요청을 구도, 스타일, 제약 조건에 맞게 진행합니다.
 - `presentation-skill` — 근거와 이야기 구조를 정리하고 편집 가능한 PPTX를 렌더링·검토합니다.
 
+### UI/UX 설계
+
+- `impeccable` — 제품 맥락과 기존 화면을 살핀 뒤 화면 방향 수립, 비평·감사·다듬기, 접근성·반응형 개선, 디자인 문서 작성을 지원합니다.
+- `ui-ux-pro-max` — 검색 가능한 스타일, 색상, 타이포그래피, UX 지침, 아이콘, 차트, 기술 스택 자료로 UI를 설계하고 검토합니다.
 ### 추가된 스킬 출처와 라이선스
 
 | Skill | Source | Source commit | License notice |
@@ -112,3 +116,5 @@
 | `imagegen` | [PracticalSwan/agent-skills](https://github.com/PracticalSwan/agent-skills) | `ff6d12f61e8250dd1b988e101a482f6adc05c451` | Apache-2.0 — `imagegen/LICENSE.txt` |
 | `presentation-skill` | [siril9/presentation-skill](https://github.com/siril9/presentation-skill) | `b6b0974e75e4c7702cfa48ba037d241f2b601d9c` | MIT — `presentation-skill/LICENSE` |
 | `diagram-design` | [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) | `57148ac6f7cf8f2d0080f23437ab2929bca15f3e` | MIT — [LICENSES/cathrynlavery-diagram-design-MIT.txt](LICENSES/cathrynlavery-diagram-design-MIT.txt) |
+| `impeccable` | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | `3671d50f0ac9a662ce0615e85a256110c9cd720b` | Apache-2.0 — [impeccable/LICENSE](impeccable/LICENSE), [impeccable/NOTICE.md](impeccable/NOTICE.md) |
+| `ui-ux-pro-max` | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | `d14efff8ed1faa4187f004f79926f428c8074ec7` | MIT — [ui-ux-pro-max/LICENSE](ui-ux-pro-max/LICENSE) |
