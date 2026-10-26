@@ -29,3 +29,14 @@ The `diagram-design` skill is licensed under the MIT License. Its complete licen
 ## alexgreensh/attention-span
 
 The independent `attention-kind` skill adapts `output-styles/attention-kind.md` from https://github.com/alexgreensh/attention-span at `2714c965e6be1fa2597510e66651e63bc67cb448` (upstream v0.8). Modified 2026-10-04 for Codex and user-language support. This skill remains licensed under AGPL-3.0; its full upstream license and source/modification notice are preserved in `attention-kind/LICENSE.txt` and `attention-kind/NOTICE.txt`.
+## pbakaus/impeccable
+
+Source: https://github.com/pbakaus/impeccable at `3671d50f0ac9a662ce0615e85a256110c9cd720b`.
+
+The `impeccable` skill is licensed under Apache-2.0. The upstream license and notice are preserved in [impeccable/LICENSE](impeccable/LICENSE) and [impeccable/NOTICE.md](impeccable/NOTICE.md).
+
+## nextlevelbuilder/ui-ux-pro-max-skill
+
+Source: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill at `d14efff8ed1faa4187f004f79926f428c8074ec7`.
+
+The `ui-ux-pro-max` skill is licensed under the MIT License. The complete upstream license and copyright notice are preserved in [ui-ux-pro-max/LICENSE](ui-ux-pro-max/LICENSE).
