@@ -55,6 +55,10 @@
 
 `pr-review-response`는 `gh-address-comments`와 역할이 겹쳐 제거했습니다. 일반적인 PR 분석에는 기존 `pr-review`를 계속 사용합니다.
 
+### UI·UX
+
+- `impeccable` — UI 설계·비평·접근성 점검·마무리와 디자인 시스템 문서화를 지원합니다. [pbakaus/impeccable](https://github.com/pbakaus/impeccable)의 Codex용 배포본을 포함합니다.
+
 ## 호출 정책
 
 토큰 사용량을 제한하기 위해 개발 툴킷은 **핵심 상황별 스킬만 자동 호출**하고, 설계·오케스트레이션·광범위한 조사처럼 비용이 커질 수 있는 흐름은 명시 호출로 전환했습니다. 명시 호출 대상에는 SKILL.md frontmatter의 `disable-model-invocation: true`와 Codex 인터페이스 정책 `agents/openai.yaml`의 `allow_implicit_invocation: false`를 함께 사용합니다.

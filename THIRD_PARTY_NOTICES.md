@@ -29,3 +29,9 @@ The `diagram-design` skill is licensed under the MIT License. Its complete licen
 ## alexgreensh/attention-span
 
 The independent `attention-kind` skill adapts `output-styles/attention-kind.md` from https://github.com/alexgreensh/attention-span at `2714c965e6be1fa2597510e66651e63bc67cb448` (upstream v0.8). Modified 2026-10-04 for Codex and user-language support. This skill remains licensed under AGPL-3.0; its full upstream license and source/modification notice are preserved in `attention-kind/LICENSE.txt` and `attention-kind/NOTICE.txt`.
+
+## pbakaus/impeccable
+
+Source: https://github.com/pbakaus/impeccable at `e89e3ada3e875a89ac2c5d33d11e65ebef6fe285`, from `.agents/skills/impeccable` (skill version 4.8.0, engine 0.1.18).
+
+The Codex distribution is vendored unchanged. The Apache-2.0 license is preserved in [impeccable/LICENSE.txt](impeccable/LICENSE.txt), and upstream third-party attribution is retained in [impeccable/NOTICE.md](impeccable/NOTICE.md). Engine binaries are downloaded by the upstream launcher and are not committed here.
