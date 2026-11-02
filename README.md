@@ -53,11 +53,13 @@
 - `gh-address-comments` — 현재 브랜치의 열려 있는 PR 리뷰/이슈 코멘트를 수집하고 선택한 항목을 처리합니다.
 - `gh-fix-ci` — GitHub Actions PR 체크 실패를 조사하고, 승인 후 수정합니다.
 
-`pr-review-response`는 `gh-address-comments`와 역할이 겹쳐 제거했습니다. 일반적인 PR 분석에는 기존 `pr-review`를 계속 사용합니다.
+- `pr-review-response` — PR 리뷰 의견의 의도·수정 대안·권장안을 설명하고, 선택한 수정안을 반영합니다. 로컬 설정과 동일하게 명시 호출 전용으로 등록했습니다.
 
 ### UI·UX
 
 - `impeccable` — UI 설계·비평·접근성 점검·마무리와 디자인 시스템 문서화를 지원합니다. [pbakaus/impeccable](https://github.com/pbakaus/impeccable)의 Codex용 배포본을 포함합니다.
+- `ui-ux-pro-max` — UI·UX 패턴, 접근성, 색상·타이포그래피와 기술별 구현 가이드를 로컬 데이터에서 검색합니다.
+- `clear-explanatory-visuals` — 설명 이미지·다이어그램·인포그래픽·슬라이드의 핵심 메시지, 읽는 순서와 시각적 일관성을 정리합니다.
 
 ## 호출 정책
 
@@ -76,6 +78,7 @@
 
 ### 명시 호출
 
+- `pr-review-response`
 - `grill-with-docs`, `research`, `to-spec`, `security-threat-model`
 - `using-superpowers` 및 나머지 Superpowers 워크플로우: `brainstorming`, `dispatching-parallel-agents`, `executing-plans`, `finishing-a-development-branch`, `receiving-code-review`, `requesting-code-review`, `subagent-driven-development`, `test-driven-development`, `using-git-worktrees`, `writing-plans`, `writing-skills`
 

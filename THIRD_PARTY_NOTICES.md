@@ -35,3 +35,9 @@ The independent `attention-kind` skill adapts `output-styles/attention-kind.md` 
 Source: https://github.com/pbakaus/impeccable at `e89e3ada3e875a89ac2c5d33d11e65ebef6fe285`, from `.agents/skills/impeccable` (skill version 4.8.0, engine 0.1.18).
 
 The Codex distribution is vendored unchanged. The Apache-2.0 license is preserved in [impeccable/LICENSE.txt](impeccable/LICENSE.txt), and upstream third-party attribution is retained in [impeccable/NOTICE.md](impeccable/NOTICE.md). Engine binaries are downloaded by the upstream launcher and are not committed here.
+
+## nextlevelbuilder/ui-ux-pro-max-skill
+
+Source: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill at `d14efff8ed1faa4187f004f79926f428c8074ec7`, from `.claude/skills/ui-ux-pro-max`.
+
+All 73 locally installed source files match this upstream revision. The complete MIT license and copyright notice are preserved in [ui-ux-pro-max/LICENSE](ui-ux-pro-max/LICENSE).
